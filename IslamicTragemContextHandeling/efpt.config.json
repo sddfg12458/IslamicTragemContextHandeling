@@ -1,0 +1,214 @@
+﻿{
+   "CodeGenerationMode": 4,
+   "ContextClassName": "forumisl_quran2Context",
+   "ContextNamespace": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": true,
+   "MinimumProductVersion": "2.6.1186",
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "IslamicTragemContextHandeling",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 2,
+   "SelectedToBeGenerated": 0,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "[forumisl_quran2].[aya]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[bab]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[bab_bokhary]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[bab_muslim]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[book]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[books]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[cat]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[cats]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[chapters]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[chapters_bokhary]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[chapters_muslim]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[chapters_ttf]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[fixed_pages]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[hadith_bokhary]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[hadith_english]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[hadith_french]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[hadith_indo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[hadith_muslim]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[hadith_new]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[hadith_translation]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[hadith_translation_manage]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[hadith_translation_manage1]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[hr_vacation]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[lang]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[lang_hadith]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[lang_word]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[marakez]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[meaning_name]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[news]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[NewsTest]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[papers]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[papers_cat]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[quran_translation]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[report_hadith]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[sharh]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[sidbar_menu]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[single_page]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[styles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[sura]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[taragem2]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[term]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[forumisl_quran2].[tragem]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": null,
+   "UncountableWords": null,
+   "UseAsyncStoredProcedureCalls": true,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDatabaseNamesForRoutines": true,
+   "UseDateOnlyTimeOnly": true,
+   "UseDbContextSplitting": false,
+   "UseDecimalDataAnnotationForSprocResult": true,
+   "UseFluentApiOnly": false,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseInternalAccessModifiersForSprocsAndFunctions": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UsePrefixNavigationNaming": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": false,
+   "UseT4": false,
+   "UseT4Split": false
+}
