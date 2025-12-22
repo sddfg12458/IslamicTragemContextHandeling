@@ -1,6 +1,6 @@
 namespace IslamicTragemContextHandeling
 {
-    public class WeatherForecast // bishoy ZIAD
+    public class WeatherForecast // bishoy Adel
     {
         public DateOnly Date { get; set; }
 
