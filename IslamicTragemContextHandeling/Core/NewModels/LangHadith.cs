@@ -9,13 +9,16 @@ using Microsoft.EntityFrameworkCore;
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
 [Table("lang_hadith", Schema = "forumisl_quran2")]
+[OldName("lang_hadith")]
 public  class LangHadith
 {
     [Key]
-    [Column("id")]
+    [OldName("id")]
     public int Id { get; set; }
 
     [Required]
-    [Column("lang")]
+    [OldName("lang")]
     public string Lang { get; set; }
+    //public virtual ICollection<Paper> Papers { get; set; }
+
 }

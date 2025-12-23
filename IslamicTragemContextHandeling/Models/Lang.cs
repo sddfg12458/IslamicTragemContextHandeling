@@ -53,4 +53,3 @@ public partial class Lang
     [StringLength(5)]
     public string Direction { get; set; }
 }
- 

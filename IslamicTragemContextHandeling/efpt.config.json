@@ -48,6 +48,10 @@
          "ObjectType": 0
       },
       {
+         "Name": "[forumisl_quran2].[cats_backup]",
+         "ObjectType": 0
+      },
+      {
          "Name": "[forumisl_quran2].[chapters]",
          "ObjectType": 0
       },

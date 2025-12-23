@@ -9,24 +9,25 @@ using Microsoft.EntityFrameworkCore;
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
 [Table("fixed_pages", Schema = "forumisl_quran2")]
+[OldName("fixed_pages")]
 public  class FixedPage
 {
     [Key]
-    [Column("id")]
+    [OldName("id")]
     public int Id { get; set; }
 
     [Required]
-    [Column("title")]
+    [OldName("title")]
     public string Title { get; set; }
 
     [Required]
-    [Column("data")]
+    [OldName("data")]
     public string Data { get; set; }
 
     [Required]
-    [Column("data_en")]
+    [OldName("data_en")]
     public string DataEn { get; set; }
 
-    [Column("status")]
-    public int Status { get; set; }
+    //[OldName("status")]
+    //public int Status { get; set; }
 }

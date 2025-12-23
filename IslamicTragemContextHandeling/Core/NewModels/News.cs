@@ -9,22 +9,23 @@ using Microsoft.EntityFrameworkCore;
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
 [Table("news", Schema = "forumisl_quran2")]
+[OldName("news")]
 public  class News
 {
     [Key]
-    [Column("id")]
+    [OldName("id")]
     public int Id { get; set; }
 
-    [Column("title")]
+    [OldName("title")]
     public string Title { get; set; }
 
-    [Column("details")]
+    [OldName("details")]
     public string Details { get; set; }
 
-    [Column("image")]
+    [OldName("image")]
     [StringLength(500)]
     public string Image { get; set; }
 
-    [Column("status")]
-    public int Status { get; set; }
+    //[OldName("status")]
+    //public int Status { get; set; }
 }

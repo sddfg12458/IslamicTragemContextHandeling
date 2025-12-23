@@ -9,33 +9,35 @@ using Microsoft.EntityFrameworkCore;
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
 [Table("quran_translation", Schema = "forumisl_quran2")]
+[OldName("quran_translation")]
 public  class QuranTranslation
 {
     [Key]
-    [Column("id")]
+    [OldName("id")]
     public int Id { get; set; }
 
-    [Column("aya_id")]
+    [OldName("aya_id")]
     public int AyaId { get; set; }
 
-    [Column("sura_no")]
+    [OldName("sura_no")]
     [StringLength(9)]
     public string SuraNo { get; set; }
 
-    [Column("aya_no")]
+    [OldName("aya_no")]
     public int? AyaNo { get; set; }
 
-    [Column("translation_lang")]
+    [OldName("translation_lang")]
     [StringLength(10)]
     public string TranslationLang { get; set; }
 
-    [Column("translation")]
+    [OldName("translation")]
     public string Translation { get; set; }
 
-    [Column("translator_name")]
+    [OldName("translator_name")]
     [StringLength(40)]
     public string TranslatorName { get; set; }
 
-    [Column("status")]
-    public int Status { get; set; }
+    //[OldName("status")]
+    //public int Status { get; set; }
+    //public virtual Aya Aya { get; set; }
 }

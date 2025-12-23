@@ -9,49 +9,50 @@ using Microsoft.EntityFrameworkCore;
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
 [Table("marakez", Schema = "forumisl_quran2")]
+[OldName("marakez")]
 public  class Marakez
 {
     [Key]
-    [Column("id")]
+    [OldName("id")]
     public int Id { get; set; }
 
-    [Column("markaz_name")]
+    [OldName("markaz_name")]
     public string MarkazName { get; set; }
 
-    [Column("country")]
+    [OldName("country")]
     public string Country { get; set; }
 
-    [Column("markaz_location")]
+    [OldName("markaz_location")]
     public string MarkazLocation { get; set; }
 
-    [Column("english_manager")]
+    [OldName("english_manager")]
     public string EnglishManager { get; set; }
 
-    [Column("phone")]
+    [OldName("phone")]
     [StringLength(112)]
     public string Phone { get; set; }
 
-    [Column("email")]
+    [OldName("email")]
     [StringLength(30)]
     public string Email { get; set; }
 
-    [Column("website")]
+    [OldName("website")]
     [StringLength(150)]
     public string Website { get; set; }
 
-    [Column("masarat")]
+    [OldName("masarat")]
     public string Masarat { get; set; }
 
     public string Intag { get; set; }
 
-    [Column("view_count")]
+    [OldName("view_count")]
     [StringLength(3000)]
     public string ViewCount { get; set; }
 
-    [Column("download_count")]
-    [StringLength(3000)]
-    public string DownloadCount { get; set; }
+    //[OldName("download_count")]
+    //[StringLength(3000)]
+    //public string DownloadCount { get; set; }
 
-    [Column("status")]
-    public int Status { get; set; }
+    //[OldName("status")]
+    //public int Status { get; set; }
 }

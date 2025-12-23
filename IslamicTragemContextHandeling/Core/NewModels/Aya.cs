@@ -9,53 +9,56 @@ using Microsoft.EntityFrameworkCore;
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
 [Table("aya", Schema = "forumisl_quran2")]
-public  class Aya
+[OldName("aya")]
+public class Aya
 {
     [Key]
-    [Column("id")]
+    [OldName("id")]
     public int Id { get; set; }
 
-    [Column("aya_id")]
+    [OldName("aya_id")]
     public int? AyaId { get; set; }
 
     [Required]
-    [Column("aya")]
+    [OldName("aya")]
     public string Aya1 { get; set; }
 
     [Required]
-    [Column("aya_no_tashkil")]
+    [OldName("aya_no_tashkil")]
     public string AyaNoTashkil { get; set; }
 
-    [Column("page_no")]
+    [OldName("page_no")]
     public int? PageNo { get; set; }
 
-    [Column("part_no")]
+    [OldName("part_no")]
     public int? PartNo { get; set; }
 
-    [Column("hezb_no")]
+    [OldName("hezb_no")]
     public int HezbNo { get; set; }
 
-    [Column("rob3_no")]
-    public int Rob3No { get; set; }
+    [OldName("rob3_no")]
+    public int RobaNo { get; set; }
 
-    [Column("aya_no")]
+    [OldName("aya_no")]
     public int? AyaNo { get; set; }
 
     [Required]
-    [Column("aya_no_ar")]
+    [OldName("aya_no_ar")]
     public string AyaNoAr { get; set; }
 
-    [Column("sura_no")]
+    [OldName("sura_no")]
     public int? SuraNo { get; set; }
 
     [Required]
-    [Column("sura_name")]
+    [OldName("sura_name")]
     [StringLength(250)]
     public string SuraName { get; set; }
 
-    [Column("wordCount")]
+    [OldName("wordCount")]
     public int WordCount { get; set; }
 
-    [Column("view_count")]
+    [OldName("view_count")]
     public int ViewCount { get; set; }
+    //public virtual ICollection<QuranTranslation> Translations { get; set; }
+
 }

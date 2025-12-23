@@ -10,33 +10,39 @@ namespace IslamicTragemContextHandeling.Core.NewModels;
 
 [Table("chapters_muslim", Schema = "forumisl_quran2")]
 [Index("CatId", Name = "hadith_bab_id_idx")]
+[OldName("chapters_muslim")]
 public  class ChaptersMuslim
 {
     [Key]
-    [Column("id")]
+    [OldName("id")]
     public int Id { get; set; }
 
     [Required]
-    [Column("name")]
+    [OldName("name")]
     [StringLength(255)]
     public string Name { get; set; }
 
-    [Column("cat_id")]
-    public int CatId { get; set; }
+    [OldName("cat_id")]
+    public int CatId { get; set; } // reffers to Cats.id
 
-    [Column("tags")]
-    [StringLength(255)]
-    public string Tags { get; set; }
+    //[OldName("tags")]
+    //[StringLength(255)]
+    //public string Tags { get; set; }
 
-    [Column("chapter_id")]
-    public int ChapterId { get; set; }
+    [OldName("chapter_id")]
+    public int ChapterId { get; set; } // reffers to Chapter.ChapterId
 
-    [Column("my_sort")]
-    public int MySort { get; set; }
+    //    [OldName("my_sort")]
+    //    public int MySort { get; set; }
 
-    [Column("status")]
-    public int Status { get; set; }
+    //    [OldName("status")]
+    //    public int Status { get; set; }
 
-    [Column("cron")]
-    public int Cron { get; set; }
+    //    [OldName("cron")]
+    //    public int Cron { get; set; }
+    //[ForeignKey(nameof(CatId))]
+    //public virtual Cat Cat { get; set; }
+
+ 
+    //public virtual Chapter Chapter { get; set; }
 }

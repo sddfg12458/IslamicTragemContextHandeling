@@ -9,70 +9,73 @@ using Microsoft.EntityFrameworkCore;
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
 [Table("term", Schema = "forumisl_quran2")]
+[OldName("term")]
 public  class Term
 {
     [Key]
-    [Column("id")]
+    [OldName("id")]
     public int Id { get; set; }
 
-    [Column("title")]
+    [OldName("title")]
     [StringLength(300)]
     public string Title { get; set; }
 
-    [Column("meaning_lang")]
+    [OldName("meaning_lang")]
     [StringLength(700)]
     public string MeaningLang { get; set; }
 
-    [Column("meaning_term")]
+    [OldName("meaning_term")]
     public string MeaningTerm { get; set; }
 
     [Required]
-    [Column("cat_id")]
+    [OldName("cat_id")]
     [StringLength(100)]
-    public string CatId { get; set; }
+    public string CatId { get; set; }  
 
-    [Column("voice_spell")]
+    [OldName("voice_spell")]
     [StringLength(300)]
     public string VoiceSpell { get; set; }
 
-    [Column("en")]
+    [OldName("en")]
     [StringLength(500)]
     public string En { get; set; }
 
-    [Column("fr")]
+    [OldName("fr")]
     [StringLength(600)]
     public string Fr { get; set; }
 
-    [Column("es")]
+    [OldName("es")]
     [StringLength(500)]
     public string Es { get; set; }
 
-    [Column("en_synonyms")]
+    [OldName("en_synonyms")]
     [StringLength(500)]
     public string EnSynonyms { get; set; }
 
-    [Column("fr_synonyms")]
+    [OldName("fr_synonyms")]
     [StringLength(500)]
     public string FrSynonyms { get; set; }
 
-    [Column("es_synonyms")]
+    [OldName("es_synonyms")]
     [StringLength(500)]
     public string EsSynonyms { get; set; }
 
-    [Column("url")]
+    [OldName("url")]
     [StringLength(300)]
     public string Url { get; set; }
 
-    [Column("page_html")]
+    [OldName("page_html")]
     public string PageHtml { get; set; }
 
-    [Column("view_count")]
+    [OldName("view_count")]
     public int ViewCount { get; set; }
 
-    [Column("status")]
-    public int Status { get; set; }
+    //[OldName("status")]
+    //public int Status { get; set; }
 
     [Required]
-    [Column("cat_title")]
-    public string CatTitle { get; set; }
+    [OldName("cat_title")]
+    public string CatTitle { get; set; } // create enum for this field or set as foreign key to Cat table
+    //public virtual Cat Category { get; set; }
 }
+ 

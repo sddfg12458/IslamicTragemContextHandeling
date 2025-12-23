@@ -33,6 +33,8 @@ public partial class forumisl_quran2Context : DbContext
 
     public virtual DbSet<Cat1> Cats1 { get; set; }
 
+    public virtual DbSet<CatsBackup> CatsBackups { get; set; }
+
     public virtual DbSet<Chapter> Chapters { get; set; }
 
     public virtual DbSet<ChaptersBokhary> ChaptersBokharies { get; set; }
@@ -103,7 +105,7 @@ public partial class forumisl_quran2Context : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=URANUS\\DEV;Initial Catalog=forumisl_quran2;User ID=ils;Password=ils@123");
+        => optionsBuilder.UseSqlServer("Data Source=10.2.20.3\\MSSql2012;Initial Catalog=forumisl_quran2;User ID=ils;Password=!L$@1237");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -169,6 +171,11 @@ public partial class forumisl_quran2Context : DbContext
         modelBuilder.Entity<Cat1>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK_cats_id");
+        });
+
+        modelBuilder.Entity<CatsBackup>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK_cats_backup_id");
         });
 
         modelBuilder.Entity<Chapter>(entity =>

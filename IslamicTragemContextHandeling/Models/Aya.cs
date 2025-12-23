@@ -6,10 +6,10 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace IslamicTragemContextHandeling.Core.NewModels;
+namespace IslamicTragemContextHandeling.Models;
 
 [Table("aya", Schema = "forumisl_quran2")]
-public  class Aya
+public partial class Aya
 {
     [Key]
     [Column("id")]

@@ -9,46 +9,53 @@ using Microsoft.EntityFrameworkCore;
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
 [Table("bab", Schema = "forumisl_quran2")]
-public  class Bab
+[OldName("bab")]
+public partial class Bab 
 {
     [Key]
-    [Column("id")]
+    [OldName("id")]
     public int Id { get; set; }
 
-    [Column("chapter_id")]
-    public int ChapterId { get; set; }
+    [OldName("chapter_id")]
+    public int ChapterId { get; set; } // references chapter(chapterId)
 
-    [Column("cat_id")]
-    public int CatId { get; set; }
+    [OldName("cat_id")]
+    public int CatId { get; set; } // references cats(id)
 
     [Required]
-    [Column("name")]
+    [OldName("name")]
     public string Name { get; set; }
 
-    [Required]
-    [Column("name_new")]
-    [StringLength(1000)]
-    public string NameNew { get; set; }
+    //[Required]
+    //[OldName("name_new")]
+    //[StringLength(1000)]
+    //public string NameNew { get; set; }
 
-    [Column("bab_id")]
+    [OldName("bab_id")]
     public int BabId { get; set; }
 
-    [Column("status")]
-    public int Status { get; set; }
+    //[OldName("status")]
+    //public int Status { get; set; }
 
-    [Column("sub_id")]
+    [OldName("sub_id")]
     public int SubId { get; set; }
 
-    [Column("cron")]
-    public int Cron { get; set; }
+    [OldName("cron")]
+    public int Cron { get; set; } // 0 or 1 ? what is this for?
 
     [Required]
-    [Column("sound")]
+    [OldName("sound")]
     [StringLength(255)]
     public string Sound { get; set; }
 
-    [Required]
-    [Column("video")]
-    [StringLength(255)]
-    public string Video { get; set; }
+    //[Required]
+    //[OldName("video")]
+    //[StringLength(255)]
+    //public string Video { get; set; }
+
+    //[ForeignKey(nameof(CatId))]
+    //public virtual Cats Cat { get; set; }
+    //[ForeignKey(nameof(ChapterId))]
+    //public Chapter Chapter { get; set; }
 }
+ 
