@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
 [Table("aya", Schema = "forumisl_quran2")]
-public  class Aya
+public  class Aya //dshfak;assjd;askdsnv
 {
     [Key]
     [Column("id")]
