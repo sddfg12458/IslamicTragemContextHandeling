@@ -8,25 +8,27 @@ using Microsoft.EntityFrameworkCore;
 
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
-[OldName("fixed_pages")]
-public class FixedPage
+[OldName("chapters")]
+public  class HadithChapter
 {
-    //it containes about us page and the rest of rows are useless
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.None)]
     [OldName("id")]
     public int Id { get; set; }
 
     [Required]
-    [OldName("title")]
-    public string Title { get; set; }
+    [OldName("name")]
+    [StringLength(255)]
+    public string Name { get; set; }
 
-    [Required]
-    [OldName("data")]
-    public string Data { get; set; } 
+    [OldName("cat_id")]
+    public int HadithCategoryId { get; set; } 
+    public HadithCategory HadithCategory { get; set; }
 
-    [Required]
-    [OldName("data_en")]
-    public string DataEn { get; set; } 
+    [OldName("chapter_id")]
+    public int ChapterNo { get; set; } // check if this is chapter number in category ask abbas for this 
+
+
+
 
 }

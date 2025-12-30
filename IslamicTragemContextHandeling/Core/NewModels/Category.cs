@@ -8,12 +8,13 @@ using Microsoft.EntityFrameworkCore;
 
 
 namespace IslamicTragemContextHandeling.Core.NewModels;
-
-[Table("cat", Schema = "forumisl_quran2")]
 [OldName("cat")]
-public partial class Cat
+public  class Category
+// this is for the library in the home page
+// i found that this is used in  categorizing the books 
 {
     [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.None)]
     [OldName("id")]
     public int Id { get; set; }
 
@@ -25,8 +26,7 @@ public partial class Cat
     [StringLength(100)]
     public string TitleAr { get; set; }
 
-    //[OldName("description")]
-    //[StringLength(1000)]
-    //public string Description { get; set; }
-    //public virtual ICollection<Term> Terms { get; set; }
+    public bool IsValidForLibrary { get; set; }
+    public bool IsValidForTerms { get; set; }
+
 }

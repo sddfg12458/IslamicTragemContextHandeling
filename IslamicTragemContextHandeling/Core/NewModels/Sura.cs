@@ -8,19 +8,20 @@ using Microsoft.EntityFrameworkCore;
 
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
-[Table("sura", Schema = "forumisl_quran2")]
-[Index("Id", Name = "sura$id", IsUnique = true)]
 [OldName("sura")]
-public  class Sura
+public class Sura
 {
     [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.None)]
+
     [OldName("id")]
     public int Id { get; set; }
 
-    [OldName("sura_no")]
-    public int? SuraNo { get; set; } // Sura Number
-
     [OldName("name")]
-    [StringLength(13)]
+    [StringLength(50)]
     public string Name { get; set; }
+
+    public  ICollection<Aya> Ayas { get; set; } = new List<Aya>();   
+
+
 }

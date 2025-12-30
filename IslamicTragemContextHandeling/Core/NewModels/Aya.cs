@@ -8,24 +8,22 @@ using Microsoft.EntityFrameworkCore;
 
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
-[Table("aya", Schema = "forumisl_quran2")]
 [OldName("aya")]
 public class Aya
 {
     [Key]
-    [OldName("id")]
+    [DatabaseGenerated(DatabaseGeneratedOption.None)]
+    [OldName("aya_id")]
     public int Id { get; set; }
 
-    [OldName("aya_id")]
-    public int? AyaId { get; set; }
 
     [Required]
     [OldName("aya")]
-    public string Aya1 { get; set; }
+    public string Text { get; set; }
 
     [Required]
     [OldName("aya_no_tashkil")]
-    public string AyaNoTashkil { get; set; }
+    public string TextNoSigned { get; set; } 
 
     [OldName("page_no")]
     public int? PageNo { get; set; }
@@ -47,18 +45,13 @@ public class Aya
     public string AyaNoAr { get; set; }
 
     [OldName("sura_no")]
-    public int? SuraNo { get; set; }
+    public int? SuraId { get; set; }
+    public  Sura Sura { get; set; }
 
-    [Required]
-    [OldName("sura_name")]
-    [StringLength(250)]
-    public string SuraName { get; set; }
+
+    public virtual ICollection<QuranTranslation> Translations { get; set; }
 
     [OldName("wordCount")]
     public int WordCount { get; set; }
-
-    [OldName("view_count")]
-    public int ViewCount { get; set; }
-    //public virtual ICollection<QuranTranslation> Translations { get; set; }
 
 }

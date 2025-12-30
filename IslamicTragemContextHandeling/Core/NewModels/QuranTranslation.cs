@@ -8,36 +8,27 @@ using Microsoft.EntityFrameworkCore;
 
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
-[Table("quran_translation", Schema = "forumisl_quran2")]
 [OldName("quran_translation")]
 public  class QuranTranslation
 {
     [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.None)]
     [OldName("id")]
     public int Id { get; set; }
 
     [OldName("aya_id")]
     public int AyaId { get; set; }
-
-    [OldName("sura_no")]
-    [StringLength(9)]
-    public string SuraNo { get; set; }
-
-    [OldName("aya_no")]
-    public int? AyaNo { get; set; }
+    public virtual Aya Aya { get; set; }
 
     [OldName("translation_lang")]
-    [StringLength(10)]
-    public string TranslationLang { get; set; }
+    [StringLength(100)]
+    public string LanguageName { get; set; } // there is a list in the website to select the language, store the values in this column
 
     [OldName("translation")]
     public string Translation { get; set; }
 
     [OldName("translator_name")]
-    [StringLength(40)]
+    [StringLength(100)]
     public string TranslatorName { get; set; }
 
-    //[OldName("status")]
-    //public int Status { get; set; }
-    //public virtual Aya Aya { get; set; }
 }

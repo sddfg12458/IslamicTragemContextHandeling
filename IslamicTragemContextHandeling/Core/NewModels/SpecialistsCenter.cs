@@ -8,25 +8,25 @@ using Microsoft.EntityFrameworkCore;
 
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
-[Table("marakez", Schema = "forumisl_quran2")]
 [OldName("marakez")]
-public  class Marakez
+public  class SpecialistsCenter
 {
+    [DatabaseGenerated(DatabaseGeneratedOption.None)]
     [Key]
     [OldName("id")]
     public int Id { get; set; }
 
     [OldName("markaz_name")]
-    public string MarkazName { get; set; }
+    public string Name { get; set; }
 
     [OldName("country")]
-    public string Country { get; set; }
+    public string CountryName { get; set; }
 
     [OldName("markaz_location")]
-    public string MarkazLocation { get; set; }
+    public string Location { get; set; }
 
     [OldName("english_manager")]
-    public string EnglishManager { get; set; }
+    public string ManagerName { get; set; }
 
     [OldName("phone")]
     [StringLength(112)]
@@ -38,21 +38,16 @@ public  class Marakez
 
     [OldName("website")]
     [StringLength(150)]
-    public string Website { get; set; }
+    public string WebsiteURL { get; set; }
 
     [OldName("masarat")]
     public string Masarat { get; set; }
 
+    [OldName("Intag")]
     public string Intag { get; set; }
 
     [OldName("view_count")]
     [StringLength(3000)]
     public string ViewCount { get; set; }
 
-    //[OldName("download_count")]
-    //[StringLength(3000)]
-    //public string DownloadCount { get; set; }
-
-    //[OldName("status")]
-    //public int Status { get; set; }
 }

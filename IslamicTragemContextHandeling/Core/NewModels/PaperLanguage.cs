@@ -8,17 +8,19 @@ using Microsoft.EntityFrameworkCore;
 
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
-[Table("lang_hadith", Schema = "forumisl_quran2")]
-[OldName("lang_hadith")]
-public  class LangHadith
+[OldName("papers_cat")]
+public partial class PaperLanguage
 {
     [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.None)]
     [OldName("id")]
     public int Id { get; set; }
 
     [Required]
-    [OldName("lang")]
-    public string Lang { get; set; }
-    //public virtual ICollection<Paper> Papers { get; set; }
+    [OldName("paper_lang")]
+    public string NameAr { get; set; }
 
+    [Required]
+    [OldName("paper_lang_en")]
+    public string NameEn { get; set; }
 }

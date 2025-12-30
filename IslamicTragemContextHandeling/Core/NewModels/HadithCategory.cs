@@ -6,49 +6,48 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
-[Table("cats", Schema = "forumisl_quran2")]
+
 [OldName("cats")]
-public partial class Cats
+public  class HadithCategory
 {
     [Key]
     [OldName("id")]
     public int Id { get; set; }
 
-    [Required]
+
     [OldName("name")]
     [StringLength(255)]
     public string Name { get; set; }
 
-    [Required]
+
     [OldName("full_name")]
     [StringLength(500)]
     public string FullName { get; set; }
 
-    [Required]
+
     [OldName("cat_name_takhreej")]
     [StringLength(255)]
     public string CatNameTakhreej { get; set; }
 
-    [Required]
+
     [OldName("writer")]
     public string Writer { get; set; }
 
-    [Required]
+
     [OldName("full_writer_name")]
     public string FullWriterName { get; set; }
 
-    [Required]
+
     [OldName("writer_death")]
     public string WriterDeath { get; set; }
 
-    [Required]
+
     [OldName("about_book")]
     public string AboutBook { get; set; }
 
-    [Required]
+
     [OldName("slug")]
     [StringLength(45)]
     public string Slug { get; set; }
@@ -59,65 +58,38 @@ public partial class Cats
     [OldName("rank")]
     public int Rank { get; set; }
 
-    [Required]
+
     [OldName("chapter_rows")]
     [StringLength(200)]
     public string ChapterRows { get; set; }
 
-    [Required]
-    [OldName("date")]
-    public string Date { get; set; }
-
-    [Required]
     [OldName("cover_image")]
     public string CoverImage { get; set; }
 
     [OldName("category")]
     public int Category { get; set; }
 
-    [Required]
-    [OldName("lang")]
-    [StringLength(300)]
-    public string Lang { get; set; }
-
-    [OldName("ver")]
-    public int Ver { get; set; }
 
     [OldName("start_id")]
-    public int StartId { get; set; }
+    public int StartId { get; set; } //TODO: check if it referes to  start from Hadith Ids then delete it ? 
 
     [OldName("end_id")]
-    public int EndId { get; set; }
+    public int EndId { get; set; } //TODO: check if it referes to  end from Hadith Ids then delete it ? 
 
     [OldName("death_year")]
     public int DeathYear { get; set; }
 
-    [Required]
+
     [OldName("index_book")]
     [StringLength(200)]
     public string IndexBook { get; set; }
 
-    [OldName("type_view")]
-    public int TypeView { get; set; }
-
-    [OldName("priority")]
-    public int Priority { get; set; }
-
-    [OldName("status")]
-    public int Status { get; set; }
-
     [OldName("search_order")]
     public int SearchOrder { get; set; }
 
-    [Required]
+
     [OldName("sound")]
     [StringLength(1000)]
     public string Sound { get; set; }
-
-    [Required]
-    [OldName("multi")]
-    [StringLength(1000)]
-    public string Multi { get; set; }
-    //public virtual ICollection<Bab> Babs { get; set; }
 
 }

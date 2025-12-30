@@ -8,64 +8,52 @@ using Microsoft.EntityFrameworkCore;
 
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
-[Table("papers", Schema = "forumisl_quran2")]
 [OldName("papers")]
 public  class Paper
 {
     [Key]
     [OldName("id")]
+    [DatabaseGenerated(DatabaseGeneratedOption.None)]
+
     public int Id { get; set; }
 
     [OldName("lang_id")]
-    public int? LangId { get; set; } // Foreign Key to LangHadith
+    public int? PaperLanguageId { get; set; } // Foreign Key to LangHadith
+    [ForeignKey(nameof(PaperLanguageId))]
+    public virtual PaperLanguage PaperLanguage { get; set; }
 
     [OldName("paper_title")]
-    public string PaperTitle { get; set; }
+    public string Title { get; set; }
 
     [OldName("paper_type")]
-    public string PaperType { get; set; }
+    public string Type { get; set; }
 
     [OldName("paper_researcher")]
-    public string PaperResearcher { get; set; }
+    public string ResearcherName { get; set; }
 
     [OldName("paper_admin")]
-    public string PaperAdmin { get; set; }
+    public string AdminName { get; set; }
 
     [OldName("paper_date")]
     [StringLength(30)]
-    public string PaperDate { get; set; }
+    public string Date { get; set; }
 
     [OldName("paper_location")]
-    public string PaperLocation { get; set; }
+    public string Location { get; set; }
 
     [OldName("pages_no")]
     [StringLength(30)]
     public string PagesNo { get; set; }
 
     [OldName("paper_summary")]
-    public string PaperSummary { get; set; }
+    public string Summary { get; set; }
 
     [OldName("paper_results")]
-    public string PaperResults { get; set; }
+    public string Results { get; set; }
 
-    //[OldName("other")]
-    //[StringLength(50)]
-    //public string Other { get; set; }
-
-    //[OldName("image")]
-    //[StringLength(250)]
-    //public string Image { get; set; }
 
     [OldName("view_count")]
     [StringLength(3000)]
-    public string ViewCount { get; set; }
+    public string ViewCount { get; set; } //TODO : should be int
 
-    //[OldName("download_count")]
-    //[StringLength(3000)]
-    //public string DownloadCount { get; set; }
-
-    //[OldName("status")]
-    //public int Status { get; set; }
-    //[ForeignKey(nameof(LangId))]
-    //public virtual LangHadith LangHadith { get; set; }
 }

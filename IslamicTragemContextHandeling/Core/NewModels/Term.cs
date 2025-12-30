@@ -8,12 +8,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
-[Table("term", Schema = "forumisl_quran2")]
 [OldName("term")]
 public  class Term
 {
     [Key]
     [OldName("id")]
+    [DatabaseGenerated(DatabaseGeneratedOption.None)]
+
     public int Id { get; set; }
 
     [OldName("title")]
@@ -64,8 +65,6 @@ public  class Term
     [StringLength(300)]
     public string Url { get; set; }
 
-    [OldName("page_html")]
-    public string PageHtml { get; set; }
 
     [OldName("view_count")]
     public int ViewCount { get; set; }

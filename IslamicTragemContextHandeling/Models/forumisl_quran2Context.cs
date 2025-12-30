@@ -33,7 +33,7 @@ public partial class forumisl_quran2Context : DbContext
 
     public virtual DbSet<Cat1> Cats1 { get; set; }
 
-    public virtual DbSet<CatsBackup> CatsBackups { get; set; }
+    //public virtual DbSet<CatsBackup> CatsBackups { get; set; }
 
     public virtual DbSet<Chapter> Chapters { get; set; }
 
@@ -173,10 +173,10 @@ public partial class forumisl_quran2Context : DbContext
             entity.HasKey(e => e.Id).HasName("PK_cats_id");
         });
 
-        modelBuilder.Entity<CatsBackup>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK_cats_backup_id");
-        });
+        //modelBuilder.Entity<CatsBackup>(entity =>
+        //{
+        //    entity.HasKey(e => e.Id).HasName("PK_cats_backup_id");
+        //});
 
         modelBuilder.Entity<Chapter>(entity =>
         {

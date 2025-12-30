@@ -8,9 +8,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
-[Table("news", Schema = "forumisl_quran2")]
 [OldName("news")]
-public  class News
+public  class News //this is for Slider in the home page
 {
     [Key]
     [OldName("id")]
@@ -24,8 +23,6 @@ public  class News
 
     [OldName("image")]
     [StringLength(500)]
-    public string Image { get; set; }
+    public string ImageUrl { get; set; }
 
-    //[OldName("status")]
-    //public int Status { get; set; }
 }
