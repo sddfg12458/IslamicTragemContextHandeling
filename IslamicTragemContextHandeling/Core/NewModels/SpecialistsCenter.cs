@@ -9,10 +9,10 @@ using Microsoft.EntityFrameworkCore;
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
 [OldName("marakez")]
-public  class SpecialistsCenter
+public  class SpecialistsCenter 
 {
-    [DatabaseGenerated(DatabaseGeneratedOption.None)]
     [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.None)]
     [OldName("id")]
     public int Id { get; set; }
 

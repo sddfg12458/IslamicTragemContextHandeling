@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace IslamicTragemContextHandeling.Core.NewModels;
 [OldName("cat")]
-public  class Category
+public  class Category 
 // this is for the library in the home page
 // i found that this is used in  categorizing the books 
 {

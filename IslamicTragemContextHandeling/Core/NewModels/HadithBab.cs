@@ -22,19 +22,16 @@ public partial class HadithBab
 
 
     [OldName("new_chapter_id")]
-    public int ChapterId { get; set; } // references chapter(chapterId)
+    public int ChapterId { get; set; } 
     [ForeignKey(nameof(ChapterId))]
     public HadithChapter Chapter { get; set; }
 
     [OldName("chapter_id")]
-    public int ChapterNo { get; set; } // references chapter(chapterId)
+    public int ChapterNo { get; set; } 
 
-    [OldName("cat_id")]
-    public int CategoryId { get; set; } // TODO : Delete this column after handeling the relation with chapter 
-    //public virtual Category Category { get; set; }
 
     [OldName("bab_id")]
-    public int BabNo { get; set; }//TODO : check if this bab number in chapter
+    public int BabNo { get; set; }
 
 
 

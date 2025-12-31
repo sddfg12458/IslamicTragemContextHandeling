@@ -11,14 +11,13 @@ namespace IslamicTragemContextHandeling.Core.NewModels;
 [OldName("lang_hadith")]
 public  class HadithLanguage
 {
-    [Key]
+    [Key] 
     [DatabaseGenerated(DatabaseGeneratedOption.None)]
     [OldName("id")]
     public int Id { get; set; }
 
     [Required]
     [OldName("lang")]
-    public string Lang { get; set; }
-    //public virtual ICollection<Paper> Papers { get; set; }
+    public string Language { get; set; }
 
 }

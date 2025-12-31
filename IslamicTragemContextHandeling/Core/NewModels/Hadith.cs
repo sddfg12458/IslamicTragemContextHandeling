@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace IslamicTragemContextHandeling.Core.NewModels
 {
+    [OldName("HadithZiadNew")]
     public class Hadith
     {
         [Key]

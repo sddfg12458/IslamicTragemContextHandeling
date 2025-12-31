@@ -2,6 +2,7 @@
 
 namespace IslamicTragemContextHandeling.Core.NewModels
 {
+    [OldName("HadithTranslation")]
     public class HadithTranslation
     {
 
@@ -10,6 +11,7 @@ namespace IslamicTragemContextHandeling.Core.NewModels
 
         [OldName("LanguageId")]
         public int LanguageId { get; set; }
+        public HadithLanguage? Language { get; set; }
 
         [OldName("SelId")]
         public int HadithId { get; set; }

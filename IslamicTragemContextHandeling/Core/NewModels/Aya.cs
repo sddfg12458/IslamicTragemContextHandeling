@@ -49,7 +49,7 @@ public class Aya
     public  Sura Sura { get; set; }
 
 
-    public virtual ICollection<QuranTranslation> Translations { get; set; }
+    //public virtual ICollection<QuranTranslation> Translations { get; set; }
 
     [OldName("wordCount")]
     public int WordCount { get; set; }

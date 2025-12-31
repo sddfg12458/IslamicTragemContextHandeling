@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
 [OldName("papers_cat")]
-public partial class PaperLanguage
+public partial class PaperLanguage 
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.None)]

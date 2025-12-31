@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
 [OldName("quran_translation")]
-public  class QuranTranslation
+public  class QuranTranslation 
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.None)]

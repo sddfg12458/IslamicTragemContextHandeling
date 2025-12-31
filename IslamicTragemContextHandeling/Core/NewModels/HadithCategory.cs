@@ -9,10 +9,11 @@ using Microsoft.EntityFrameworkCore;
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
 
-[OldName("cats")]
+[OldName("cats")] 
 public  class HadithCategory
 {
     [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.None)]
     [OldName("id")]
     public int Id { get; set; }
 

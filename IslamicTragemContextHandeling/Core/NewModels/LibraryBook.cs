@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace IslamicTragemContextHandeling.Core.NewModels;
 [OldName("book")]
 public  class LibraryBook
-{
+{ 
     // this is used for all the books  المكتبه or library module
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.None)]

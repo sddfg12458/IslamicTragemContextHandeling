@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore;
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
 [OldName("papers")]
-public  class Paper
+public  class Paper 
 {
     [Key]
-    [OldName("id")]
     [DatabaseGenerated(DatabaseGeneratedOption.None)]
+    [OldName("id")]
 
     public int Id { get; set; }
 

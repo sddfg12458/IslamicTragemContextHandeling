@@ -28,7 +28,4 @@ public  class HadithChapter
     [OldName("chapter_id")]
     public int ChapterNo { get; set; } // check if this is chapter number in category ask abbas for this 
 
-
-
-
 }

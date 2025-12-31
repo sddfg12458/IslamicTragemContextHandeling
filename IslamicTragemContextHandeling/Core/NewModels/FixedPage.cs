@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
 [OldName("fixed_pages")]
-public class FixedPage
+public class FixedPage 
 {
     //it containes about us page and the rest of rows are useless
     [Key]

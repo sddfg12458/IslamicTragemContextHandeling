@@ -12,8 +12,8 @@ namespace IslamicTragemContextHandeling.Core.NewModels;
 public  class Term
 {
     [Key]
-    [OldName("id")]
     [DatabaseGenerated(DatabaseGeneratedOption.None)]
+    [OldName("id")]
 
     public int Id { get; set; }
 
@@ -23,15 +23,18 @@ public  class Term
 
     [OldName("meaning_lang")]
     [StringLength(700)]
-    public string MeaningLang { get; set; }
+    public string MeaningLanguage { get; set; }
 
     [OldName("meaning_term")]
     public string MeaningTerm { get; set; }
 
+
     [Required]
-    [OldName("cat_id")]
+    [OldName("new_Cat_Id")]
     [StringLength(100)]
-    public string CatId { get; set; }  
+    public int? CategoryId { get; set; }  
+    public Category? Category { get; set; }
+
 
     [OldName("voice_spell")]
     [StringLength(300)]
@@ -39,42 +42,32 @@ public  class Term
 
     [OldName("en")]
     [StringLength(500)]
-    public string En { get; set; }
+    public string English { get; set; }
 
     [OldName("fr")]
     [StringLength(600)]
-    public string Fr { get; set; }
+    public string French { get; set; }
 
     [OldName("es")]
     [StringLength(500)]
-    public string Es { get; set; }
+    public string Spanish { get; set; }
 
     [OldName("en_synonyms")]
     [StringLength(500)]
-    public string EnSynonyms { get; set; }
+    public string EnglishSynonyms { get; set; }
 
     [OldName("fr_synonyms")]
     [StringLength(500)]
-    public string FrSynonyms { get; set; }
+    public string FrenchSynonyms { get; set; }
 
     [OldName("es_synonyms")]
     [StringLength(500)]
-    public string EsSynonyms { get; set; }
-
-    [OldName("url")]
-    [StringLength(300)]
-    public string Url { get; set; }
+    public string SpanishSynonyms { get; set; }
 
 
     [OldName("view_count")]
     public int ViewCount { get; set; }
 
-    //[OldName("status")]
-    //public int Status { get; set; }
 
-    [Required]
-    [OldName("cat_title")]
-    public string CatTitle { get; set; } // create enum for this field or set as foreign key to Cat table
-    //public virtual Cat Category { get; set; }
 }
  

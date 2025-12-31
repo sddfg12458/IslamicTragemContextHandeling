@@ -21,7 +21,7 @@ public class Sura
     [StringLength(50)]
     public string Name { get; set; }
 
-    public  ICollection<Aya> Ayas { get; set; } = new List<Aya>();   
+    //public  ICollection<Aya> Ayas { get; set; } = new List<Aya>();   
 
 
 }

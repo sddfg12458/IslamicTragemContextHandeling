@@ -9,9 +9,10 @@ using Microsoft.EntityFrameworkCore;
 namespace IslamicTragemContextHandeling.Core.NewModels;
 
 [OldName("news")]
-public  class News //this is for Slider in the home page
+public  class News //this is for Slider in the home page 
 {
     [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.None)]
     [OldName("id")]
     public int Id { get; set; }
 
