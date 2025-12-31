@@ -19,14 +19,23 @@ public class FixedPage
 
     [Required]
     [OldName("title")]
-    public string Title { get; set; }
+    public string Name { get; set; }
 
     [Required]
     [OldName("data")]
-    public string Data { get; set; } 
+    public string ContentAr { get; set; } 
 
     [Required]
     [OldName("data_en")]
-    public string DataEn { get; set; } 
+    public string ContentEn { get; set; } 
+
+    [Required]
+    public string TitleAr { get; set; } 
+
+    [Required]
+    public string TitleEn { get; set; } 
+
+
+
 
 }

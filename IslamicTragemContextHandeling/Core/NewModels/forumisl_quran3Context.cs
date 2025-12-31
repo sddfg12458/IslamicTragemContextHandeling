@@ -18,27 +18,28 @@ public partial class forumisl_quran3Context : DbContext
     {
     }
 
-    //public virtual DbSet<Sura> Suras { get; set; }
-    //public virtual DbSet<Aya> Ayas { get; set; }
-    //public virtual DbSet<QuranTranslation> QuranTranslations { get; set; }
+    public virtual DbSet<Sura> Suras { get; set; }
+    public virtual DbSet<Aya> Ayas { get; set; }
+    public virtual DbSet<QuranTranslation> QuranTranslations { get; set; }
 
-    //public virtual DbSet<Category> Categories { get; set; }
-    //public virtual DbSet<FixedPage> FixedPages { get; set; }
-    //public virtual DbSet<News> News { get; set; }
-    //public virtual DbSet<PaperLanguage> PaperLanguages { get; set; }
-    //public virtual DbSet<SpecialistsCenter> SpecialistsCenters { get; set; }
+    public virtual DbSet<Category> Categories { get; set; }
+    public virtual DbSet<FixedPage> FixedPages { get; set; }
+    public virtual DbSet<News> News { get; set; }
+    public virtual DbSet<PaperLanguage> PaperLanguages { get; set; }
+    public virtual DbSet<SpecialistsCenter> SpecialistsCenters { get; set; }
 
-    //public virtual DbSet<LibraryBook> LibraryBooks { get; set; }
-    //public virtual DbSet<Paper> Papers { get; set; }
-    //public virtual DbSet<Term> Terms { get; set; }
-    //public virtual DbSet<HadithCategory> HadithCategories { get; set; }
-    //public virtual DbSet<HadithChapter> HadithChapters { get; set; }
+    public virtual DbSet<LibraryBook> LibraryBooks { get; set; }
+    public virtual DbSet<Paper> Papers { get; set; }
+    public virtual DbSet<Term> Terms { get; set; }
+    public virtual DbSet<HadithCategory> HadithCategories { get; set; }
+    public virtual DbSet<HadithChapter> HadithChapters { get; set; }
 
-    //public virtual DbSet<HadithLanguage> HadithLanguages { get; set; }
-    //public virtual DbSet<HadithBab> HadithBabs { get; set; }
+    public virtual DbSet<HadithLanguage> HadithLanguages { get; set; }
+    public virtual DbSet<HadithBab> HadithBabs { get; set; }
 
     public virtual DbSet<Hadith> Hadiths { get; set; }
     public virtual DbSet<HadithTranslation> HadithTranslations { get; set; }
+    public virtual DbSet<ContactUs> ContactUs { get; set; }
 
 
 

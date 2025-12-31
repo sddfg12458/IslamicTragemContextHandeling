@@ -4,6 +4,7 @@ using IslamicTragemContextHandeling.Core.NewModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IslamicTragemContextHandeling.Core.Migrations
 {
     [DbContext(typeof(forumisl_quran3Context))]
-    partial class forumisl_quran3ContextModelSnapshot : ModelSnapshot
+    [Migration("20251231143936_ChangeColumnNamesAndAddColumnsToFixedPages")]
+    partial class ChangeColumnNamesAndAddColumnsToFixedPages
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -89,31 +92,6 @@ namespace IslamicTragemContextHandeling.Core.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
-                });
-
-            modelBuilder.Entity("IslamicTragemContextHandeling.Core.NewModels.ContactUs", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("Address")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Email")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Message")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Name")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ContactUs");
                 });
 
             modelBuilder.Entity("IslamicTragemContextHandeling.Core.NewModels.FixedPage", b =>

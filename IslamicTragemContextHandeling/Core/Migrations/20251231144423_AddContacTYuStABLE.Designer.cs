@@ -4,6 +4,7 @@ using IslamicTragemContextHandeling.Core.NewModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IslamicTragemContextHandeling.Core.Migrations
 {
     [DbContext(typeof(forumisl_quran3Context))]
-    partial class forumisl_quran3ContextModelSnapshot : ModelSnapshot
+    [Migration("20251231144423_AddContacTYuStABLE")]
+    partial class AddContacTYuStABLE
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
